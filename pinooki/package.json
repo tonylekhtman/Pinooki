@@ -3,14 +3,31 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "radium": "^0.24.1",
+    "rc-steps": "^3.1.1",
     "react": "^16.4.2",
+    "react-d3": "^0.4.0",
+    "react-digraph": "^4.1.0",
     "react-dom": "^16.4.2",
-    "react-scripts": "1.1.4"
+    "react-dropdown": "^1.5.0",
+    "react-flow-diagram": "^2.13.0",
+    "react-icons": "^3.0.5",
+    "react-native": "^0.56.0",
+    "react-native-step-indicator": "0.0.9",
+    "react-node-graph": "^1.1.1",
+    "react-scripts": "1.1.4",
+    "react-stepzilla": "^4.7.2",
+    "semantic-ui-react": "^0.82.2",
+    "storm-react-diagrams": "^5.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.22.1"
   }
 }

@@ -17,6 +17,10 @@ ol, ul {
   margin-bottom: 10px;
 }
 
+.tony{
+  height: 100vh;
+}
+
 .square {
   background: #fff;
   border: 1px solid #999;
@@ -24,7 +28,7 @@ ol, ul {
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  height: 104px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;

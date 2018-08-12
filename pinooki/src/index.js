@@ -1,68 +1,41 @@
+import StepZilla from 'react-stepzilla';
+import 'rc-steps/assets/index.css';
+import 'rc-steps/assets/iconfont.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import StepExampleGroupShorthand from './somefile'
+import Dropdown from 'react-dropdown'
+import 'react-dropdown/style.css'
+
+
+const steps =
+[
+  {name: 'Step 1', component: <div>div!</div>},
+  {name: 'Step 2', component: <div>div!</div>}
+];
+const options = [
+  'one', 'two', 'three'
+]
+
+const defaultOption = options[0]
 
 
 class Square extends React.Component {
-  render() {
-    return (
-      <button className="square">
-        {/* TODO */}
-      </button>
-    );
-  }
+render() {
+  return (
+    <div className='step-progress'>
+        <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option" />
+        <StepExampleGroupShorthand />
+    </div>
+  )
+}
 }
 
-class Board extends React.Component {
-  renderSquare(i) {
-    return <Square />;
-  }
 
-  render() {
-    const status = 'Next player: X';
-
-    return (
-      <div>
-        <div className="status">{status}</div>
-        <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
-        </div>
-      </div>
-    );
-  }
-}
-
-class Game extends React.Component {
-  render() {
-    return (
-      <div className="game">
-        <div className="game-board">
-          <Board />
-        </div>
-        <div className="game-info">
-          <div>{/* status */}</div>
-          <ol>{/* TODO */}</ol>
-        </div>
-      </div>
-    );
-  }
-}
 
 // ========================================
 
 ReactDOM.render(
-  <Game />,
+  <Square />,
   document.getElementById('root')
 );
